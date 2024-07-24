@@ -176,12 +176,12 @@ def random_intensity(image, factor, p=0.5):
     scale_factor = np.random.uniform(1.0 - factor, 1.0 + factor, size=[image.shape[0], 1, 1, 1]).astype('float32')
     return image * scale_factor + shift_factor
 
-def transform_string(s,mode):
-    # 检查输入字符串是否符合预期的形式
+def transform_string(s, mode):
+    # Check if the input string meets the expected format
     if len(s) > 1 and s[0] == 'S' and s[1].isdigit():
-        # 插入下划线和'T1'到指定的位置
+        # Insert an underscore and the mode (e.g., 'T1') at the specified position
         new_s = s[:2] + '_' + mode + '_' + s[2:]
         return new_s
     else:
-        # 如果不符合预期形式，返回原字符串或者进行错误处理
+        # If the input string does not meet the expected format, return the original string or handle the error
         return s
