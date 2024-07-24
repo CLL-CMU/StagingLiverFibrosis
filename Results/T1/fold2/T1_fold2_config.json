@@ -1,0 +1,27 @@
+{
+    "mode": "T1",
+    "num_classes": 4,
+    "num_epochs": 300,
+    "batch_size": 12,
+    "target_shapes": [
+        36,
+        168,
+        192
+    ],
+    "angle": 45,
+    "flip_prob": 0.5,
+    "intensity_prob": 0.25,
+    "intensity_factor": 0.1,
+    "train_transform_list": "[\"z_flip\", \"x_flip\", \"y_flip\", \"rotation\", \"random_intensity\"]",
+    "data_dir": "/data-sdb/nnUNet/nnUNet_raw_data/Class_data_wo_peri/images/",
+    "anno_root": "Txtfile",
+    "results_root": "Results",
+    "gpus": "0",
+    "fold": 2,
+    "train_anno_file": "Txtfile/train_fold2.txt",
+    "val_anno_file": "Txtfile/val_fold2.txt",
+    "tensorboard_dir": "Results/T1/fold2/",
+    "checkpoint_path": "Results/T1/fold2/model_checkpoint.pth",
+    "resume_training": false,
+    "log_dir": "Results/T1/fold2/training.log"
+}
